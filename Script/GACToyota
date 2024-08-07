@@ -1,0 +1,10 @@
+[rewrite_local]
+# 广汽丰田 获取token
+^https:\/\/gw\.nevapp\.gtmc\.com\.cn\/ha\/iam\/api\/sec\/oauth\/token url script-response-body https://raw.githubusercontent.com/xzxxn777/Surge/main/Script/GQFT/GQFT.js
+
+[task_local]
+# 广汽丰田 定时任务
+33 6,16,23 * * * https://raw.githubusercontent.com/xzxxn777/Surge/main/Script/GQFT/GQFT.js, tag=广汽丰田, enabled=true
+
+[mitm]
+hostname = gw.nevapp.gtmc.com.cn
