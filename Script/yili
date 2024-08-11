@@ -1,0 +1,10 @@
+[rewrite_local]
+# 伊利-摇一摇_获取token
+^https:\/\/wx-camp-wzry\.mscampapi\.digitalyili\.com\/wx-camp-exercise\/stage\/qryUserInfo url script-response-body https://raw.githubusercontent.com/xzxxn777/Surge/main/Script/YiLi/YiLi.js
+
+[task]
+# 伊利-摇一摇 定时任务
+5 0,18 * * * https://raw.githubusercontent.com/xzxxn777/Surge/main/Script/YiLi/YiLi.js, tag=伊利-摇一摇, enabled=true
+
+[mitm]
+hostname = wx-camp-wzry.mscampapi.digitalyili.com
