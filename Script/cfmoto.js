@@ -1,6 +1,6 @@
 [rewrite_local]
 # 获取 Cookie
-^https:\/\/c\.cfmoto\.com\/jv\/user\/user_info url script-response-body cfmoto.js
+^https:\/\/c\.cfmoto\.com\/jv\/user\/user_info url script-response-body https://raw.githubusercontent.com/leiyiyan/resource/main/script/cfmoto/cfmoto.js
 
 # 开屏广告
 ^https:\/\/c\.cfmoto\.com\/cfmotoservermall\/app\/ad$ reject
